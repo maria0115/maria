@@ -1,0 +1,27 @@
+
+//변수 선언 (기본형 : 메모리확보/ 참조형 : 변수만 확보)
+
+int a;
+double b;
+
+Student s = new Student();
+
+//값 지정
+a = 10;
+b = 9.9;
+
+s.Student("홍길동");
+
+//변수선언 + 값 지정 = 초기화
+int b = 10;
+
+// *** 객체 초기화
+
+	class temp{
+	
+	int temp;
+	
+	void temp();
+	
+	
+	}
