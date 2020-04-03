@@ -14,7 +14,7 @@ public class Ex04_로또2 {
 			{
 				h=j;
 				lotto[i][j]= (int)(Math.random()*45)+1;
-				lotto[i][h]=lotto[i][j];
+				//lotto[i][h]=lotto[i][j];
 				//Math.random();	//0<=x<1
 				
 				for(h=0; h<j; h++) 
