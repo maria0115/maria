@@ -1,0 +1,40 @@
+*네트워킹 (통신)
+
+	- Protocol : 통신상의 규칙
+		- 이론 OSI 7계층
+		- IP(Internet Protocol)
+			' TCP(Transfer Control Protocol)-정확
+			' UDT(User Datagram Protocol)-동영상 화질깨져도 무상관
+		- HTTP / SMTP / FTP ...
+	
+	 - 통신을 할 때 기본사항
+	 	[ 내(client)	]			[ 너(server)	]
+	 	TCP				TCP
+	 	내주소			지주소
+	 	내포트번호			지포트번호
+	 	상대주소(*)		내주소
+	 	상대포트번호(*)	내포트번호(*)
+	 	
+	 - 포트번호 (0~65535)
+	 	0: 사용하지 않음
+	 	1:1023 : 시스템이 사용
+	 	1024~ : 사용자 지정 가능
+	 	
+	 	
+	 	<서버>
+	 	
+	 	1.ServerSocket 생성(포트번호)
+	 	2. 클라이언트가 접속할 때까지 대기
+	 		접속을 하면 소켓을 생성
+	 		Socket s = ss.accept()
+	 	3. 입출력 스트림을 얻어오기
+	 	4. 읽고쓰기
+	 	5. 닫기
+	 		
+	 		
+	 	<클라이언트>
+	 	
+	 	1. Socket 생성(서버IP, 서버PORT)
+	 	2. 입출력 스트림 얻어오기
+	 	3. 읽고쓰기
+	 	4. 닫기
