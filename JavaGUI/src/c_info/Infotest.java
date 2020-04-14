@@ -81,5 +81,6 @@ public class Infotest extends JFrame{
 		t.display();
 
 	}
+	
 
 }
