@@ -56,6 +56,7 @@ public class GeneralReservation extends JFrame implements ActionListener{
 		setVisible(true);
 		Display();
 		eventProc();
+		setTa(ta);
 	}
 
 	public void Display()
@@ -117,6 +118,7 @@ public class GeneralReservation extends JFrame implements ActionListener{
 	public void setTa(JTextArea ta) {
 		this.ta = ta;
 	}
+	
 
 	public void eventProc() {
 		b_seat.addActionListener(this);	

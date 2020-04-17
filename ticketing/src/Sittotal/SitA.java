@@ -13,6 +13,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
 
 import main.Mainpage;
 import ticketing.GeneralReservation;
@@ -23,10 +24,9 @@ public class SitA extends JPanel implements ActionListener{
 	JButton [] jbs1 = new JButton[300]; //좌석을 위한 버튼
 	JLabel jl1;
 	Sitmain parent;
-	GeneralReservation gr;
-	
-	
 	GeneralReservation grandparent;
+	JTextArea ta;
+
 	public SitA(Sitmain parent, GeneralReservation grandparent) {
 		this.parent = parent;
 		this.grandparent =grandparent;
@@ -79,11 +79,15 @@ public class SitA extends JPanel implements ActionListener{
 					
 					if(s == 0)
 					{
+						ta = new JTextArea();
 						parent.setVisible(false);
 						Consert_vo cv = new Consert_vo();
 						cv.setSeat(seat);
 						grandparent.setResult_conname(seat);
-						g
+						ta.setText(grandparent.getResult_conname());
+						grandparent.setTa(ta);
+						
+						
 					
 			
 						// 확인버튼을 누르는 지금 이 순간에 vo에 있는 값들을 ta에

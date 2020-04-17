@@ -13,6 +13,7 @@ import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
 
 import ticketing.GeneralReservation;
 import vo.Consert_vo;
@@ -25,6 +26,7 @@ public class SitB extends JPanel implements ActionListener{
 	
 	Sitmain parent;
 	GeneralReservation grandparent;
+	JTextArea ta;
 	public SitB(Sitmain parent, GeneralReservation grandparent) {
 		this.parent = parent;
 		this.grandparent = grandparent;
@@ -88,8 +90,8 @@ public class SitB extends JPanel implements ActionListener{
 					parent.setVisible(false);
 					Consert_vo cv = new Consert_vo();
 					cv.setSeat(seat);
+					grandparent.setResult_conname(seat);
 					
-					grandparent.setTa(seat,50,50);
 					
 				}
 				
