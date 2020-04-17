@@ -2,20 +2,29 @@ package Sittotal;
 
 import javax.swing.*;
 import javafx.scene.layout.Border;
+import ticketing.GeneralReservation;
+import vo.Consert_vo;
+
 import java.awt.*;
 import java.awt.event.*;
 import java.lang.*;
+import java.util.ArrayList;
 import java.util.Calendar;
 
 public class Sitmain extends JFrame{
 		SitA a;
-		SitB b;		
+		SitB b;
+		GeneralReservation gr;
 		
 		public Sitmain()
 		{
+		}
+
+		public Sitmain(GeneralReservation gr) {
 			super("좌석선택");
-			a=new SitA();
-			b=new SitB();
+			this.gr = gr;
+			a=new SitA(this, gr);
+			b=new SitB(this, gr);
 			
 			JTabbedPane panel = new JTabbedPane();
 			
@@ -23,18 +32,13 @@ public class Sitmain extends JFrame{
 			panel.add("B구역",b);
 			
 			add(panel);
+			
 			setSize(1900,800);
 			setVisible(true);
 			setLocation(20, 20);
-			//setDefaultCloseOperation(EXIT_ON_CLOSE);
 		}
-		
-	public static void main(String[] args)  {
-		
-		Sitmain me = new Sitmain();
-		//SitA sita = new SitA();
 
-	}
-	
+
+		
 
 }
